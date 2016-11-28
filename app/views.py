@@ -1,9 +1,10 @@
+from flask import render_template
 from app import app
 
 @app.route('/')
 @app.route('/home/')
 def index():
-    return "Homepage"
+    return render_template('home.html')
 
 @app.route('/about/')
 def interests():

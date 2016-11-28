@@ -5,9 +5,14 @@
   "main": "index.js",
   "dependencies": {
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "requirejs": "^2.3.2",
+    "webpack": "^1.13.3"
   },
   "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-loader": "^6.2.8",
+    "babel-preset-es2015": "^6.18.0",
     "eslint": "^3.10.2",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
@@ -15,7 +20,12 @@
     "eslint-plugin-react": "^6.7.1"
   },
   "scripts": {
+    "build": "babel app/src/react -d app/static/lib",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Mechdriver/zbehnke-personal-site.git"
   },
   "keywords": [
     "website"
