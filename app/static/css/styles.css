@@ -1,0 +1,81 @@
+html body {
+  background-image: url('../img/golden-gate-night.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Raleway', sans-serif;
+  top
+}
+
+#nav-bar {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  background-image: url('../img/golden-gate-night.jpg');
+  z-index: 9999;
+}
+
+#nav-bar ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-bar ul li {
+  display: inline;
+  list-style: none;
+}
+
+#nav-bar ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  font-size: 24px;
+  vertical-align: middle;
+  padding: 15px;
+}
+
+#nav-bar ul li a:hover {
+  color: white;
+  text-shadow: 0px 0px 3px white;
+  opacity: 1;
+  vertical-align: middle;
+}
+
+#intro {
+  height: 950px;
+  padding-top: 395px;
+  line-height: 50px;
+  display: block;
+  color: white;
+  opacity: 0.7;
+  font-size: 32px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#experience-header {
+  display: block;
+  color: white;
+  opacity: 0.7;
+  font-size: 64px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#experience-section {
+  width: auto;
+  margin-left: 200px;
+  margin-right: 200px;
+  background-color: rgba(64, 32, 97, 0.9);
+  height: 750px;
+}
+
+#experience-text {
+  width: auto;
+  font-size: 64px;
+  text-align: center;
+  vertical-align: middle;
+}
