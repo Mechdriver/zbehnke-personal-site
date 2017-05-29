@@ -53,6 +53,7 @@
 	var ReactDOM = __webpack_require__(/*! react-dom */ 32);
 	var NavBar = __webpack_require__(/*! ./NavBar.jsx */ 178);
 	var Experience = __webpack_require__(/*! ./Experience.jsx */ 179);
+	var InterestBox = __webpack_require__(/*! ./InterestBox.jsx */ 180);
 	
 	var HomePage = React.createClass({
 	  displayName: 'HomePage',
@@ -81,7 +82,56 @@
 	          )
 	        )
 	      ),
-	      React.createElement(Experience, null)
+	      React.createElement(Experience, null),
+	      React.createElement(
+	        'div',
+	        { id: 'interests-grid' },
+	        React.createElement(
+	          'span',
+	          { id: 'interests-header' },
+	          'Interests'
+	        ),
+	        React.createElement(
+	          'ul',
+	          { id: 'interests-list' },
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'Github', iconClass: 'fa fa-github fa-5x', link: 'https://github.com/Mechdriver' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'Steam', iconClass: 'fa fa-steam fa-5x', link: 'http://steamcommunity.com/id/mechdriver/' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'Pok\xE9Dex', iconClass: 'fa fa-paw fa-5x', link: 'https://pokedextracker.com/u/zbehnke/living-dex' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'LinkedIn', iconClass: 'fa fa-linkedin-square fa-5x', link: 'https://www.linkedin.com/in/zachbehnke/' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'Symmetric Strength', iconClass: 'fa fa-universal-access fa-5x', link: 'https://symmetricstrength.com/lifter/mechdriver' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'Spotify', iconClass: 'fa fa-spotify fa-5x', link: 'https://open.spotify.com/user/mechdriver' })
+	          ),
+	          ' '
+	        )
+	      )
 	    );
 	  }
 	});
@@ -22072,8 +22122,8 @@
 	          null,
 	          React.createElement(
 	            "a",
-	            { href: "#" },
-	            "Experience"
+	            { href: "#experience" },
+	            "Background"
 	          )
 	        ),
 	        React.createElement(
@@ -22081,7 +22131,7 @@
 	          null,
 	          React.createElement(
 	            "a",
-	            { href: "#" },
+	            { href: "#interests-header" },
 	            "Interests"
 	          )
 	        ),
@@ -22118,14 +22168,14 @@
 	  render: function render() {
 	    return React.createElement(
 	      "div",
-	      null,
+	      { id: "experience" },
 	      React.createElement(
 	        "p",
 	        { id: "experience-header" },
 	        React.createElement(
 	          "span",
 	          null,
-	          "Experience"
+	          "Background"
 	        )
 	      ),
 	      React.createElement(
@@ -22134,7 +22184,41 @@
 	        React.createElement(
 	          "span",
 	          { id: "experience-text" },
-	          "Stuff stuusdflk jawel;t jsdl;fj tj asl;dkfj l;sdjf lsjadhgkjdhfgsa."
+	          React.createElement(
+	            "p",
+	            null,
+	            "I was raised around computers. My dad was a programmer and would constantly work and play with them throughout my childhood. My early experiences with computers involved videogames. I loved point and cick adventure games and whatever retro games my dad could emulate on his machines."
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "I knew what programming was thanks to the Foxtrot and Dilbert comics that I would read obessively. I really wanted to learn C++ but I could not find the proper resources to teach myself. Even though I was motivated to learn, I found programming textbooks daunting."
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "In the middle of highschool my family moved to California. I was still playing videogames and just started learning about weightlifting from my dad. I asked him to teach me after I saw 'Wolverine Origins'. I was the family's IT person at this point. Fixing simple hardware and software problems was challenging and fun to me."
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "As I was applying to colleges I knew that I wanted to work with computers. I wanted to program them. I applied early to Cal Poly SLO for Software Engineering. After a few months of anticipation I was accepted."
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "Before I left for college I decided to teach myself some programming. I discovered Python and attempted to write a small text based adventure game. Python is still one of my favorite languages and it is my top choice for projects and scripts."
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "In college, programming did not come easy to me. Coming from a homeschooled background the structure and deadlines were hard to get used to. I was also addicted to socialized. I could always find someone to talk to about my interests and it was amazing to be around people of the same mindset."
+	          ),
+	          React.createElement(
+	            "p",
+	            null,
+	            "Filler text. Edit stuff later to be more consice."
+	          )
 	        )
 	      )
 	    );
@@ -22142,6 +22226,40 @@
 	});
 	
 	module.exports = Experience;
+
+/***/ }),
+/* 180 */
+/*!***************************************!*\
+  !*** ./app/src/react/InterestBox.jsx ***!
+  \***************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(/*! react */ 1);
+	
+	var InterestBox = React.createClass({
+	  displayName: "InterestBox",
+	
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      { id: "interest-box" },
+	      React.createElement(
+	        "a",
+	        { href: this.props.link, target: "_blank" },
+	        React.createElement("i", { className: this.props.iconClass, "aria-hidden": "true" }),
+	        React.createElement(
+	          "span",
+	          null,
+	          this.props.name
+	        )
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = InterestBox;
 
 /***/ })
 /******/ ]);

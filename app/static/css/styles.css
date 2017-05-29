@@ -45,7 +45,7 @@ html body {
 }
 
 #intro {
-  height: 950px;
+  height: 80vh;
   padding-top: 395px;
   line-height: 50px;
   display: block;
@@ -56,26 +56,83 @@ html body {
   vertical-align: middle;
 }
 
+#experience {
+  padding-top: 50px;
+}
+
 #experience-header {
   display: block;
   color: white;
   opacity: 0.7;
-  font-size: 64px;
+  font-size: 56px;
   text-align: center;
   vertical-align: middle;
 }
 
 #experience-section {
   width: auto;
-  margin-left: 200px;
-  margin-right: 200px;
-  background-color: rgba(64, 32, 97, 0.9);
-  height: 750px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-left: 300px;
+  margin-right: 300px;
+  height: auto;
 }
 
 #experience-text {
   width: auto;
-  font-size: 64px;
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  text-align: left;
+  vertical-align: middle;
+}
+
+#interests-grid {
+  width: auto;
+  margin-left: 300px;
+  margin-right: 300px;
+  height: auto;
+  padding-top: 300px;
+}
+
+#interests-header {
+  display: block;
+  color: white;
+  opacity: 0.7;
+  font-size: 56px;
   text-align: center;
   vertical-align: middle;
+}
+
+#interests-list{
+  padding-top: 50px;
+  list-style-type: none;
+  columns: 3;
+}
+
+#interest-box {
+  margin-bottom: 25px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  vertical-align: top;
+  display: inline-block;
+}
+
+#interest-box a{
+  color: white;
+  opacity: 0.7;
+  font-size: 28px;
+}
+
+#interest-box a:hover {
+  text-shadow: 0px 0px 3px white;
+  opacity: 1;
+}
+
+#interest-box a {
+  text-decoration: none;
+}
+
+#interest-box a span {
+  display: block;
 }

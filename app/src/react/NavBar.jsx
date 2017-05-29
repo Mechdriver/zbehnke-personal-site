@@ -6,8 +6,8 @@ var NavBar = React.createClass({
       <nav id="nav-bar">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Experience</a></li>
-          <li><a href="#">Interests</a></li>
+          <li><a href="#experience">Background</a></li>
+          <li><a href="#interests-header">Interests</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
