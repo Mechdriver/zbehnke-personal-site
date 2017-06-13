@@ -49,92 +49,128 @@
 
 	'use strict';
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
 	var React = __webpack_require__(/*! react */ 1);
 	var ReactDOM = __webpack_require__(/*! react-dom */ 32);
 	var NavBar = __webpack_require__(/*! ./NavBar.jsx */ 178);
 	var Experience = __webpack_require__(/*! ./Experience.jsx */ 179);
 	var InterestBox = __webpack_require__(/*! ./InterestBox.jsx */ 180);
+	var ContactForm = __webpack_require__(/*! ./ContactForm.jsx */ 181);
 	
-	var HomePage = React.createClass({
-	  displayName: 'HomePage',
+	var HomePage = function (_React$Component) {
+	  _inherits(HomePage, _React$Component);
 	
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(NavBar, null),
-	      React.createElement(
+	  function HomePage() {
+	    _classCallCheck(this, HomePage);
+	
+	    return _possibleConstructorReturn(this, (HomePage.__proto__ || Object.getPrototypeOf(HomePage)).apply(this, arguments));
+	  }
+	
+	  _createClass(HomePage, [{
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
 	        'div',
 	        null,
+	        React.createElement(NavBar, null),
 	        React.createElement(
-	          'p',
-	          { id: 'intro' },
+	          'div',
+	          null,
 	          React.createElement(
-	            'span',
-	            { id: 'my-name' },
-	            'Zachary Behnke'
-	          ),
-	          React.createElement('br', null),
-	          React.createElement(
-	            'span',
-	            { id: 'summary' },
-	            'I like programming, Pok\xE9mon, and power lifting.'
+	            'p',
+	            { id: 'intro' },
+	            React.createElement(
+	              'span',
+	              { id: 'my-name' },
+	              'Zachary Behnke'
+	            ),
+	            React.createElement('br', null),
+	            React.createElement(
+	              'span',
+	              { id: 'summary' },
+	              'I like programming, Pok\xE9mon, and power lifting.'
+	            )
 	          )
-	        )
-	      ),
-	      React.createElement(Experience, null),
-	      React.createElement(
-	        'div',
-	        { id: 'interests-grid' },
+	        ),
+	        React.createElement(Experience, null),
 	        React.createElement(
-	          'span',
-	          { id: 'interests-header' },
-	          'Interests'
+	          'div',
+	          { id: 'interests-grid' },
+	          React.createElement(
+	            'span',
+	            { id: 'interests-header' },
+	            'Interests'
+	          ),
+	          React.createElement(
+	            'ul',
+	            { id: 'interests-list' },
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(InterestBox, { name: 'Github', iconClass: 'fa fa-github fa-5x', link: 'https://github.com/Mechdriver' })
+	            ),
+	            ' ',
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(InterestBox, { name: 'Steam', iconClass: 'fa fa-steam fa-5x', link: 'http://steamcommunity.com/id/mechdriver/' })
+	            ),
+	            ' ',
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(InterestBox, { name: 'Pok\xE9Dex', iconClass: 'fa fa-paw fa-5x', link: 'https://pokedextracker.com/u/zbehnke/living-dex' })
+	            ),
+	            ' ',
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(InterestBox, { name: 'LinkedIn', iconClass: 'fa fa-linkedin-square fa-5x', link: 'https://www.linkedin.com/in/zachbehnke/' })
+	            ),
+	            ' ',
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(InterestBox, { name: 'Symmetric Strength', iconClass: 'fa fa-universal-access fa-5x', link: 'https://symmetricstrength.com/lifter/mechdriver' })
+	            ),
+	            ' ',
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement(InterestBox, { name: 'Spotify', iconClass: 'fa fa-spotify fa-5x', link: 'https://open.spotify.com/user/mechdriver' })
+	            ),
+	            ' '
+	          )
 	        ),
 	        React.createElement(
-	          'ul',
-	          { id: 'interests-list' },
+	          'div',
+	          { id: 'contact-section' },
 	          React.createElement(
-	            'li',
+	            'p',
 	            null,
-	            React.createElement(InterestBox, { name: 'Github', iconClass: 'fa fa-github fa-5x', link: 'https://github.com/Mechdriver' })
+	            React.createElement(
+	              'span',
+	              { id: 'contact-header' },
+	              'Contact'
+	            )
 	          ),
-	          ' ',
-	          React.createElement(
-	            'li',
-	            null,
-	            React.createElement(InterestBox, { name: 'Steam', iconClass: 'fa fa-steam fa-5x', link: 'http://steamcommunity.com/id/mechdriver/' })
-	          ),
-	          ' ',
-	          React.createElement(
-	            'li',
-	            null,
-	            React.createElement(InterestBox, { name: 'Pok\xE9Dex', iconClass: 'fa fa-paw fa-5x', link: 'https://pokedextracker.com/u/zbehnke/living-dex' })
-	          ),
-	          ' ',
-	          React.createElement(
-	            'li',
-	            null,
-	            React.createElement(InterestBox, { name: 'LinkedIn', iconClass: 'fa fa-linkedin-square fa-5x', link: 'https://www.linkedin.com/in/zachbehnke/' })
-	          ),
-	          ' ',
-	          React.createElement(
-	            'li',
-	            null,
-	            React.createElement(InterestBox, { name: 'Symmetric Strength', iconClass: 'fa fa-universal-access fa-5x', link: 'https://symmetricstrength.com/lifter/mechdriver' })
-	          ),
-	          ' ',
-	          React.createElement(
-	            'li',
-	            null,
-	            React.createElement(InterestBox, { name: 'Spotify', iconClass: 'fa fa-spotify fa-5x', link: 'https://open.spotify.com/user/mechdriver' })
-	          ),
-	          ' '
+	          React.createElement(ContactForm, null)
 	        )
-	      )
-	    );
-	  }
-	});
+	      );
+	    }
+	  }]);
+	
+	  return HomePage;
+	}(React.Component);
+	
+	;
 	
 	ReactDOM.render(React.createElement(HomePage, null), document.getElementById('root'));
 
@@ -22096,58 +22132,79 @@
 
 	"use strict";
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
 	var React = __webpack_require__(/*! react */ 1);
 	
-	var NavBar = React.createClass({
-	  displayName: "NavBar",
+	var NavBar = function (_React$Component) {
+	  _inherits(NavBar, _React$Component);
 	
-	  render: function render() {
-	    return React.createElement(
-	      "nav",
-	      { id: "nav-bar" },
-	      React.createElement(
-	        "ul",
-	        null,
+	  function NavBar() {
+	    _classCallCheck(this, NavBar);
+	
+	    return _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).apply(this, arguments));
+	  }
+	
+	  _createClass(NavBar, [{
+	    key: "render",
+	    value: function render() {
+	      return React.createElement(
+	        "nav",
+	        { id: "nav-bar" },
 	        React.createElement(
-	          "li",
+	          "ul",
 	          null,
 	          React.createElement(
-	            "a",
-	            { href: "#" },
-	            "Home"
-	          )
-	        ),
-	        React.createElement(
-	          "li",
-	          null,
+	            "li",
+	            null,
+	            React.createElement(
+	              "a",
+	              { href: "#" },
+	              "Home"
+	            )
+	          ),
 	          React.createElement(
-	            "a",
-	            { href: "#experience" },
-	            "Background"
-	          )
-	        ),
-	        React.createElement(
-	          "li",
-	          null,
+	            "li",
+	            null,
+	            React.createElement(
+	              "a",
+	              { href: "#experience" },
+	              "Background"
+	            )
+	          ),
 	          React.createElement(
-	            "a",
-	            { href: "#interests-header" },
-	            "Interests"
-	          )
-	        ),
-	        React.createElement(
-	          "li",
-	          null,
+	            "li",
+	            null,
+	            React.createElement(
+	              "a",
+	              { href: "#interests-header" },
+	              "Interests"
+	            )
+	          ),
 	          React.createElement(
-	            "a",
-	            { href: "#" },
-	            "Contact"
+	            "li",
+	            null,
+	            React.createElement(
+	              "a",
+	              { href: "#" },
+	              "Contact"
+	            )
 	          )
 	        )
-	      )
-	    );
-	  }
-	});
+	      );
+	    }
+	  }]);
+	
+	  return NavBar;
+	}(React.Component);
+	
+	;
 	
 	module.exports = NavBar;
 
@@ -22160,70 +22217,96 @@
 
 	"use strict";
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
 	var React = __webpack_require__(/*! react */ 1);
 	
-	var Experience = React.createClass({
-	  displayName: "Experience",
+	var Experience = function (_React$Component) {
+	  _inherits(Experience, _React$Component);
 	
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { id: "experience" },
-	      React.createElement(
-	        "p",
-	        { id: "experience-header" },
-	        React.createElement(
-	          "span",
-	          null,
-	          "Background"
-	        )
-	      ),
-	      React.createElement(
+	  function Experience() {
+	    _classCallCheck(this, Experience);
+	
+	    return _possibleConstructorReturn(this, (Experience.__proto__ || Object.getPrototypeOf(Experience)).apply(this, arguments));
+	  }
+	
+	  _createClass(Experience, [{
+	    key: "render",
+	    value: function render() {
+	      return React.createElement(
 	        "div",
-	        { id: "experience-section" },
+	        { id: "experience" },
 	        React.createElement(
-	          "span",
-	          { id: "experience-text" },
+	          "p",
+	          { id: "experience-header" },
 	          React.createElement(
-	            "p",
+	            "span",
 	            null,
-	            "I was raised around computers. My dad was a programmer and would constantly work and play with them throughout my childhood. My early experiences with computers involved videogames. I loved point and cick adventure games and whatever retro games my dad could emulate on his machines."
-	          ),
+	            "Background"
+	          )
+	        ),
+	        React.createElement(
+	          "div",
+	          { id: "experience-section" },
 	          React.createElement(
-	            "p",
-	            null,
-	            "I knew what programming was thanks to the Foxtrot and Dilbert comics that I would read obessively. I really wanted to learn C++ but I could not find the proper resources to teach myself. Even though I was motivated to learn, I found programming textbooks daunting."
-	          ),
-	          React.createElement(
-	            "p",
-	            null,
-	            "In the middle of highschool my family moved to California. I was still playing videogames and just started learning about weightlifting from my dad. I asked him to teach me after I saw 'Wolverine Origins'. I was the family's IT person at this point. Fixing simple hardware and software problems was challenging and fun to me."
-	          ),
-	          React.createElement(
-	            "p",
-	            null,
-	            "As I was applying to colleges I knew that I wanted to work with computers. I wanted to program them. I applied early to Cal Poly SLO for Software Engineering. After a few months of anticipation I was accepted."
-	          ),
-	          React.createElement(
-	            "p",
-	            null,
-	            "Before I left for college I decided to teach myself some programming. I discovered Python and attempted to write a small text based adventure game. Python is still one of my favorite languages and it is my top choice for projects and scripts."
-	          ),
-	          React.createElement(
-	            "p",
-	            null,
-	            "In college, programming did not come easy to me. Coming from a homeschooled background the structure and deadlines were hard to get used to. I was also addicted to socialized. I could always find someone to talk to about my interests and it was amazing to be around people of the same mindset."
-	          ),
-	          React.createElement(
-	            "p",
-	            null,
-	            "Filler text. Edit stuff later to be more consice."
+	            "span",
+	            { id: "experience-text" },
+	            React.createElement(
+	              "p",
+	              null,
+	              "I was raised around computers. My dad was a programmer and would constantly work and play with them throughout my childhood. My early experiences with computers involved video games. I loved point and click adventure games and whatever retro games my dad could emulate on his machines."
+	            ),
+	            React.createElement(
+	              "p",
+	              null,
+	              "I knew what programming was thanks to the Foxtrot and Dilbert comics that I would read obsessively. I really wanted to learn C++ but I could not find the proper resources to teach myself. Even though I was motivated to learn, I found programming textbooks daunting."
+	            ),
+	            React.createElement(
+	              "p",
+	              null,
+	              "As I was applying to colleges I knew that I wanted to work with computers. I wanted to program them. I applied early to Cal Poly SLO for Software Engineering. After a few months of anticipation I was accepted."
+	            ),
+	            React.createElement(
+	              "p",
+	              null,
+	              "Before I left for college I decided to teach myself some programming. I discovered Python and attempted to write a small text based adventure game. Python is still one of my favorite languages and it is my top choice for projects and scripts."
+	            ),
+	            React.createElement(
+	              "p",
+	              null,
+	              "In college, programming did not come easy to me. Coming from a homeschooled background the structure and deadlines were hard to get used to. I was also addicted to socialized. I could always find someone to talk to about my interests and it was amazing to be around people of the same mindset."
+	            ),
+	            React.createElement(
+	              "p",
+	              null,
+	              "With time, work, and internships I became more and more adapt at programming. My classes gave me exposure to OpenGL, Android, and a variety of languages. One of my internships introduces me to embedded systems. My part time job during my Senior year introduced me to industry level software development."
+	            ),
+	            React.createElement(
+	              "p",
+	              null,
+	              "After I graduated from Cal Poly I received a job offer for a company in the Bay Area. I am currently working there as a web developer. My weekends are spent hiking with my girlfriend, breeding Pok\xE9mon, and tinkering with interesting JavaScrip frameworks."
+	            ),
+	            React.createElement(
+	              "p",
+	              null,
+	              "If you would like to get in touch I can be contacted through LinkedIn or through my Contact Form."
+	            )
 	          )
 	        )
-	      )
-	    );
-	  }
-	});
+	      );
+	    }
+	  }]);
+	
+	  return Experience;
+	}(React.Component);
+	
+	;
 	
 	module.exports = Experience;
 
@@ -22236,30 +22319,169 @@
 
 	"use strict";
 	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
 	var React = __webpack_require__(/*! react */ 1);
 	
-	var InterestBox = React.createClass({
-	  displayName: "InterestBox",
+	var InterestBox = function (_React$Component) {
+	  _inherits(InterestBox, _React$Component);
 	
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { id: "interest-box" },
-	      React.createElement(
-	        "a",
-	        { href: this.props.link, target: "_blank" },
-	        React.createElement("i", { className: this.props.iconClass, "aria-hidden": "true" }),
-	        React.createElement(
-	          "span",
-	          null,
-	          this.props.name
-	        )
-	      )
-	    );
+	  function InterestBox() {
+	    _classCallCheck(this, InterestBox);
+	
+	    return _possibleConstructorReturn(this, (InterestBox.__proto__ || Object.getPrototypeOf(InterestBox)).apply(this, arguments));
 	  }
-	});
+	
+	  _createClass(InterestBox, [{
+	    key: "render",
+	    value: function render() {
+	      return React.createElement(
+	        "div",
+	        { id: "interest-box" },
+	        React.createElement(
+	          "a",
+	          { href: this.props.link, target: "_blank" },
+	          React.createElement("i", { className: this.props.iconClass, "aria-hidden": "true" }),
+	          React.createElement(
+	            "span",
+	            null,
+	            this.props.name
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return InterestBox;
+	}(React.Component);
+	
+	;
 	
 	module.exports = InterestBox;
+
+/***/ }),
+/* 181 */
+/*!***************************************!*\
+  !*** ./app/src/react/ContactForm.jsx ***!
+  \***************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var React = __webpack_require__(/*! react */ 1);
+	
+	var ContactForm = function (_React$Component) {
+	  _inherits(ContactForm, _React$Component);
+	
+	  function ContactForm(props) {
+	    _classCallCheck(this, ContactForm);
+	
+	    var _this = _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).call(this, props));
+	
+	    _this.state = { name: '',
+	      email: '',
+	      message: '',
+	      nameId: 'contact-input',
+	      emailId: 'contact-input',
+	      messageId: 'message-area' };
+	
+	    _this.handleNameChange = _this.handleNameChange.bind(_this);
+	    _this.handleEmailChange = _this.handleEmailChange.bind(_this);
+	    _this.handleMessageChange = _this.handleMessageChange.bind(_this);
+	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+	    return _this;
+	  }
+	
+	  _createClass(ContactForm, [{
+	    key: 'handleNameChange',
+	    value: function handleNameChange(event) {
+	      this.setState({ name: event.target.value });
+	    }
+	  }, {
+	    key: 'handleEmailChange',
+	    value: function handleEmailChange(event) {
+	      this.setState({ email: event.target.value });
+	    }
+	  }, {
+	    key: 'handleMessageChange',
+	    value: function handleMessageChange(event) {
+	      this.setState({ message: event.target.value });
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit(event) {
+	      if (this.state.name === '') {
+	        this.setState({ nameId: 'contact-input-error' });
+	      } else {
+	        this.setState({ nameId: 'contact-input' });
+	        alert("Haha! Hey this worked. Neat. Don't forget to email yourself." + '\n' + this.state.name + '\n' + this.state.email + '\n' + this.state.message);
+	      }
+	      {/*TODO: Send email*/}
+	      event.preventDefault();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        'div',
+	        { id: 'contact-form' },
+	        React.createElement(
+	          'form',
+	          { onSubmit: this.handleSubmit },
+	          React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	              'label',
+	              { id: 'contact-label' },
+	              'Name:'
+	            ),
+	            React.createElement('input', { id: this.state.nameId, type: 'text', value: this.state.name, onChange: this.handleNameChange })
+	          ),
+	          React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	              'label',
+	              { id: 'contact-label' },
+	              'Email:'
+	            ),
+	            React.createElement('input', { id: this.state.emailId, type: 'text', value: this.state.email, onChange: this.handleEmailChange })
+	          ),
+	          React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	              'label',
+	              { id: 'contact-label' },
+	              'Message:'
+	            ),
+	            React.createElement('textarea', { id: this.state.messageId, value: this.state.message, onChange: this.handleMessageChange })
+	          ),
+	          React.createElement('input', { type: 'submit', value: 'Send' })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return ContactForm;
+	}(React.Component);
+	
+	module.exports = ContactForm;
 
 /***/ })
 /******/ ]);

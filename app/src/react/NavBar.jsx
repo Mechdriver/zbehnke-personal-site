@@ -1,7 +1,7 @@
 var React = require('react');
 
-var NavBar = React.createClass({
-  render: function() {
+class NavBar extends React.Component {
+  render() {
     return (
       <nav id="nav-bar">
         <ul>
@@ -13,6 +13,6 @@ var NavBar = React.createClass({
       </nav>
     );
   }
-});
+};
 
 module.exports = NavBar;

@@ -1,7 +1,7 @@
 var React = require('react');
 
-var InterestBox = React.createClass({
-  render: function() {
+class InterestBox extends React.Component {
+  render() {
     return (
       <div id="interest-box">
         <a href={this.props.link} target="_blank">
@@ -11,6 +11,6 @@ var InterestBox = React.createClass({
       </div>
     );
   }
-});
+};
 
 module.exports = InterestBox;

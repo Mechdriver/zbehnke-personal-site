@@ -4,7 +4,6 @@ html body {
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Raleway', sans-serif;
-  top
 }
 
 #nav-bar {
@@ -12,7 +11,7 @@ html body {
   top:0;
   left: 0;
   right: 0;
-  background-image: url('../img/golden-gate-night.jpg');
+  background-color:rgba(28, 1, 24, 1.0);
   z-index: 9999;
 }
 
@@ -54,10 +53,15 @@ html body {
   font-size: 32px;
   text-align: center;
   vertical-align: middle;
+  cursor: default;
 }
 
 #experience {
   padding-top: 50px;
+}
+
+#experience:hover {
+  cursor: default;
 }
 
 #experience-header {
@@ -87,6 +91,7 @@ html body {
 }
 
 #interests-grid {
+  /* TODO: Fix this centering? */
   width: auto;
   margin-left: 300px;
   margin-right: 300px;
@@ -119,9 +124,11 @@ html body {
 }
 
 #interest-box a{
+  /* TODO: Make this have a background to show that it is clickable. Or change color. */
   color: white;
   opacity: 0.7;
   font-size: 28px;
+  text-decoration: none;
 }
 
 #interest-box a:hover {
@@ -129,10 +136,77 @@ html body {
   opacity: 1;
 }
 
-#interest-box a {
-  text-decoration: none;
-}
-
 #interest-box a span {
   display: block;
+}
+
+#contact-header {
+  display: block;
+  color: white;
+  opacity: 0.7;
+  font-size: 56px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#contact-form {
+  width: auto;
+  margin-left: 400px;
+  margin-right: 400px;
+  height: auto;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#contact-label {
+  width: 140px;
+  display: inline-block;
+  text-align: right;
+  color: white;
+  opacity: 0.7;
+  font-size: 28px;
+}
+
+#contact-input {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
+  outline-color: white;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  opacity: 0.7;
+  font-size: 28px;
+  width: 600px;
+  height: 50px;
+}
+
+#contact-input-error {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid red;
+  outline-color: red;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  opacity: 0.7;
+  font-size: 28px;
+  width: 600px;
+  height: 50px;
+}
+
+#message-area {
+  vertical-align: top;
+  resize: none;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
+  outline-color: white;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  opacity: 0.7;
+  font-size: 28px;
+  width: 600px;
+  height: 400px;
 }

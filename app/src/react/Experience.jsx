@@ -1,7 +1,7 @@
 var React = require('react');
 
-var Experience = React.createClass({
-  render: function() {
+class Experience extends React.Component {
+  render() {
     return (
       <div id="experience">
         <p id="experience-header">
@@ -11,15 +11,11 @@ var Experience = React.createClass({
           <span id="experience-text">
             <p>
               I was raised around computers. My dad was a programmer and would constantly work and play with them throughout my childhood.
-              My early experiences with computers involved videogames. I loved point and cick adventure games and whatever retro games my dad could emulate on his machines.
+              My early experiences with computers involved video games. I loved point and click adventure games and whatever retro games my dad could emulate on his machines.
             </p>
             <p>
-              I knew what programming was thanks to the Foxtrot and Dilbert comics that I would read obessively. I really wanted
+              I knew what programming was thanks to the Foxtrot and Dilbert comics that I would read obsessively. I really wanted
               to learn C++ but I could not find the proper resources to teach myself. Even though I was motivated to learn, I found programming textbooks daunting.
-            </p>
-            <p>
-              In the middle of highschool my family moved to California. I was still playing videogames and just started learning about weightlifting from my dad.
-              I asked him to teach me after I saw 'Wolverine Origins'. I was the family's IT person at this point. Fixing simple hardware and software problems was challenging and fun to me.
             </p>
             <p>
               As I was applying to colleges I knew that I wanted to work with computers. I wanted to program them. I applied early to Cal Poly SLO for Software Engineering.
@@ -34,13 +30,21 @@ var Experience = React.createClass({
               addicted to socialized. I could always find someone to talk to about my interests and it was amazing to be around people of the same mindset.
             </p>
             <p>
-              Filler text. Edit stuff later to be more consice.
+              With time, work, and internships I became more and more adapt at programming. My classes gave me exposure to OpenGL, Android, and a variety of languages.
+              One of my internships introduces me to embedded systems. My part time job during my Senior year introduced me to industry level software development.
+            </p>
+            <p>
+              After I graduated from Cal Poly I received a job offer for a company in the Bay Area. I am currently working there as a web developer.
+              My weekends are spent hiking with my girlfriend, breeding Pokémon, and tinkering with interesting JavaScrip frameworks.
+            </p>
+            <p>
+              If you would like to get in touch I can be contacted through LinkedIn or through my Contact Form.
             </p>
           </span>
         </div>
       </div>
     );
   }
-});
+};
 
 module.exports = Experience;
