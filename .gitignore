@@ -3,3 +3,6 @@ node_modules
 
 #ignore flask package
 flask
+
+#ignore compiled python
+*.pyc
