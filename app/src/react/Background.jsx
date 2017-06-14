@@ -1,14 +1,14 @@
 var React = require('react');
 
-class Experience extends React.Component {
+class Background extends React.Component {
   render() {
     return (
-      <div id="experience">
-        <p id="experience-header">
+      <div id="background-area">
+        <p id="background-header">
           <span>Background</span>
         </p>
-        <div id="experience-section">
-          <span id="experience-text">
+        <div id="background-section">
+          <span id="background-text">
             <p>
               I was raised around computers. My dad was a programmer and would constantly work and play with them throughout my childhood.
               My early experiences with computers involved video games. I loved point and click adventure games and whatever retro games my dad could emulate on his machines.
@@ -24,10 +24,6 @@ class Experience extends React.Component {
             <p>
               Before I left for college I decided to teach myself some programming. I discovered Python and attempted to write a small text based adventure game.
               Python is still one of my favorite languages and it is my top choice for projects and scripts.
-            </p>
-            <p>
-              In college, programming did not come easy to me. Coming from a homeschooled background the structure and deadlines were hard to get used to. I was also
-              addicted to socialized. I could always find someone to talk to about my interests and it was amazing to be around people of the same mindset.
             </p>
             <p>
               With time, work, and internships I became more and more adapt at programming. My classes gave me exposure to OpenGL, Android, and a variety of languages.
@@ -47,4 +43,4 @@ class Experience extends React.Component {
   }
 };
 
-module.exports = Experience;
+module.exports = Background;
