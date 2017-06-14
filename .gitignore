@@ -6,3 +6,7 @@ flask
 
 #ignore compiled python
 *.pyc
+
+#ignore compiled JS
+app/static/lib/bundle.js
+app/static/lib/bundle.js.map
