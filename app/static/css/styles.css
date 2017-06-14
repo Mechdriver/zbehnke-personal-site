@@ -56,15 +56,14 @@ html body {
   cursor: default;
 }
 
-#experience {
+#background-area {
   padding-top: 50px;
 }
 
-#experience:hover {
+#background-area:hover {
   cursor: default;
 }
-
-#experience-header {
+#background-header {
   display: block;
   color: white;
   opacity: 0.7;
@@ -73,15 +72,16 @@ html body {
   vertical-align: middle;
 }
 
-#experience-section {
+#background-section {
   width: auto;
   background-color: rgba(0, 0, 0, 0.3);
   margin-left: 300px;
   margin-right: 300px;
+  padding: 25px;
   height: auto;
 }
 
-#experience-text {
+#background-text {
   width: auto;
   font-size: 20px;
   color: white;
@@ -90,13 +90,12 @@ html body {
   vertical-align: middle;
 }
 
-#interests-grid {
-  /* TODO: Fix this centering? */
+#interests-section {
   width: auto;
   margin-left: 300px;
   margin-right: 300px;
   height: auto;
-  padding-top: 300px;
+  padding-top: 150px;
 }
 
 #interests-header {
@@ -108,23 +107,29 @@ html body {
   vertical-align: middle;
 }
 
-#interests-list{
+#interests-list {
   padding-top: 50px;
+  padding-left: 0;
   list-style-type: none;
   columns: 3;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
 }
 
 #interest-box {
   margin-bottom: 25px;
-  width: 300px;
-  height: 300px;
-  text-align: center;
-  vertical-align: top;
+}
+
+#interest-background {
+  padding-top: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
   display: inline-block;
 }
 
-#interest-box a{
-  /* TODO: Make this have a background to show that it is clickable. Or change color. */
+#interest-box a {
   color: white;
   opacity: 0.7;
   font-size: 28px;
@@ -136,8 +141,18 @@ html body {
   opacity: 1;
 }
 
-#interest-box a span {
+#interest-box i {
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#interest-box span {
   display: block;
+}
+
+#contact-section {
+  padding-top: 150px;
 }
 
 #contact-header {

@@ -60,8 +60,8 @@
 	var React = __webpack_require__(/*! react */ 1);
 	var ReactDOM = __webpack_require__(/*! react-dom */ 32);
 	var NavBar = __webpack_require__(/*! ./NavBar.jsx */ 178);
-	var Experience = __webpack_require__(/*! ./Experience.jsx */ 179);
-	var InterestBox = __webpack_require__(/*! ./InterestBox.jsx */ 180);
+	var Background = __webpack_require__(/*! ./Background.jsx */ 179);
+	var Interests = __webpack_require__(/*! ./Interests.jsx */ 180);
 	var ContactForm = __webpack_require__(/*! ./ContactForm.jsx */ 181);
 	
 	var HomePage = function (_React$Component) {
@@ -99,56 +99,8 @@
 	            )
 	          )
 	        ),
-	        React.createElement(Experience, null),
-	        React.createElement(
-	          'div',
-	          { id: 'interests-grid' },
-	          React.createElement(
-	            'span',
-	            { id: 'interests-header' },
-	            'Interests'
-	          ),
-	          React.createElement(
-	            'ul',
-	            { id: 'interests-list' },
-	            React.createElement(
-	              'li',
-	              null,
-	              React.createElement(InterestBox, { name: 'Github', iconClass: 'fa fa-github fa-5x', link: 'https://github.com/Mechdriver' })
-	            ),
-	            ' ',
-	            React.createElement(
-	              'li',
-	              null,
-	              React.createElement(InterestBox, { name: 'Steam', iconClass: 'fa fa-steam fa-5x', link: 'http://steamcommunity.com/id/mechdriver/' })
-	            ),
-	            ' ',
-	            React.createElement(
-	              'li',
-	              null,
-	              React.createElement(InterestBox, { name: 'Pok\xE9Dex', iconClass: 'fa fa-paw fa-5x', link: 'https://pokedextracker.com/u/zbehnke/living-dex' })
-	            ),
-	            ' ',
-	            React.createElement(
-	              'li',
-	              null,
-	              React.createElement(InterestBox, { name: 'LinkedIn', iconClass: 'fa fa-linkedin-square fa-5x', link: 'https://www.linkedin.com/in/zachbehnke/' })
-	            ),
-	            ' ',
-	            React.createElement(
-	              'li',
-	              null,
-	              React.createElement(InterestBox, { name: 'Symmetric Strength', iconClass: 'fa fa-universal-access fa-5x', link: 'https://symmetricstrength.com/lifter/mechdriver' })
-	            ),
-	            ' ',
-	            React.createElement(
-	              'li',
-	              null,
-	              React.createElement(InterestBox, { name: 'Spotify', iconClass: 'fa fa-spotify fa-5x', link: 'https://open.spotify.com/user/mechdriver' })
-	            ),
-	            ' '
-	          )
-	        ),
+	        React.createElement(Background, null),
+	        React.createElement(Interests, null),
 	        React.createElement(
 	          'div',
 	          { id: 'contact-section' },
@@ -22174,7 +22126,7 @@
 	            null,
 	            React.createElement(
 	              "a",
-	              { href: "#experience" },
+	              { href: "#background-area" },
 	              "Background"
 	            )
 	          ),
@@ -22183,7 +22135,7 @@
 	            null,
 	            React.createElement(
 	              "a",
-	              { href: "#interests-header" },
+	              { href: "#interests-section" },
 	              "Interests"
 	            )
 	          ),
@@ -22192,7 +22144,7 @@
 	            null,
 	            React.createElement(
 	              "a",
-	              { href: "#" },
+	              { href: "#contact-section" },
 	              "Contact"
 	            )
 	          )
@@ -22211,7 +22163,7 @@
 /***/ }),
 /* 179 */
 /*!**************************************!*\
-  !*** ./app/src/react/Experience.jsx ***!
+  !*** ./app/src/react/Background.jsx ***!
   \**************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22227,24 +22179,24 @@
 	
 	var React = __webpack_require__(/*! react */ 1);
 	
-	var Experience = function (_React$Component) {
-	  _inherits(Experience, _React$Component);
+	var Background = function (_React$Component) {
+	  _inherits(Background, _React$Component);
 	
-	  function Experience() {
-	    _classCallCheck(this, Experience);
+	  function Background() {
+	    _classCallCheck(this, Background);
 	
-	    return _possibleConstructorReturn(this, (Experience.__proto__ || Object.getPrototypeOf(Experience)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Background.__proto__ || Object.getPrototypeOf(Background)).apply(this, arguments));
 	  }
 	
-	  _createClass(Experience, [{
+	  _createClass(Background, [{
 	    key: "render",
 	    value: function render() {
 	      return React.createElement(
 	        "div",
-	        { id: "experience" },
+	        { id: "background-area" },
 	        React.createElement(
 	          "p",
-	          { id: "experience-header" },
+	          { id: "background-header" },
 	          React.createElement(
 	            "span",
 	            null,
@@ -22253,10 +22205,10 @@
 	        ),
 	        React.createElement(
 	          "div",
-	          { id: "experience-section" },
+	          { id: "background-section" },
 	          React.createElement(
 	            "span",
-	            { id: "experience-text" },
+	            { id: "background-text" },
 	            React.createElement(
 	              "p",
 	              null,
@@ -22280,11 +22232,6 @@
 	            React.createElement(
 	              "p",
 	              null,
-	              "In college, programming did not come easy to me. Coming from a homeschooled background the structure and deadlines were hard to get used to. I was also addicted to socialized. I could always find someone to talk to about my interests and it was amazing to be around people of the same mindset."
-	            ),
-	            React.createElement(
-	              "p",
-	              null,
 	              "With time, work, and internships I became more and more adapt at programming. My classes gave me exposure to OpenGL, Android, and a variety of languages. One of my internships introduces me to embedded systems. My part time job during my Senior year introduced me to industry level software development."
 	            ),
 	            React.createElement(
@@ -22303,21 +22250,21 @@
 	    }
 	  }]);
 	
-	  return Experience;
+	  return Background;
 	}(React.Component);
 	
 	;
 	
-	module.exports = Experience;
+	module.exports = Background;
 
 /***/ }),
 /* 180 */
-/*!***************************************!*\
-  !*** ./app/src/react/InterestBox.jsx ***!
-  \***************************************/
+/*!*************************************!*\
+  !*** ./app/src/react/Interests.jsx ***!
+  \*************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -22328,42 +22275,79 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var React = __webpack_require__(/*! react */ 1);
+	var ReactDOM = __webpack_require__(/*! react-dom */ 32);
+	var InterestBox = __webpack_require__(/*! ./InterestBox.jsx */ 182);
 	
-	var InterestBox = function (_React$Component) {
-	  _inherits(InterestBox, _React$Component);
+	var Interests = function (_React$Component) {
+	  _inherits(Interests, _React$Component);
 	
-	  function InterestBox() {
-	    _classCallCheck(this, InterestBox);
+	  function Interests() {
+	    _classCallCheck(this, Interests);
 	
-	    return _possibleConstructorReturn(this, (InterestBox.__proto__ || Object.getPrototypeOf(InterestBox)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Interests.__proto__ || Object.getPrototypeOf(Interests)).apply(this, arguments));
 	  }
 	
-	  _createClass(InterestBox, [{
-	    key: "render",
+	  _createClass(Interests, [{
+	    key: 'render',
 	    value: function render() {
 	      return React.createElement(
-	        "div",
-	        { id: "interest-box" },
+	        'div',
+	        { id: 'interests-section' },
 	        React.createElement(
-	          "a",
-	          { href: this.props.link, target: "_blank" },
-	          React.createElement("i", { className: this.props.iconClass, "aria-hidden": "true" }),
+	          'span',
+	          { id: 'interests-header' },
+	          'Interests'
+	        ),
+	        React.createElement(
+	          'ul',
+	          { id: 'interests-list' },
 	          React.createElement(
-	            "span",
+	            'li',
 	            null,
-	            this.props.name
-	          )
+	            React.createElement(InterestBox, { name: 'Github', iconClass: 'fa fa-github fa-5x', 'aria-hidden': 'true', link: 'https://github.com/Mechdriver' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'Steam', iconClass: 'fa fa-steam fa-5x', 'aria-hidden': 'true', link: 'http://steamcommunity.com/id/mechdriver/' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'Pok\xE9Dex', iconClass: 'fa fa-paw fa-5x', 'aria-hidden': 'true', link: 'https://pokedextracker.com/u/zbehnke/living-dex' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'LinkedIn', iconClass: 'fa fa-linkedin-square fa-5x', 'aria-hidden': 'true', link: 'https://www.linkedin.com/in/zachbehnke/' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'Strength', iconClass: 'fa fa-user fa-5x', 'aria-hidden': 'true', link: 'https://symmetricstrength.com/lifter/mechdriver' })
+	          ),
+	          ' ',
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(InterestBox, { name: 'Spotify', iconClass: 'fa fa-spotify fa-5x', 'aria-hidden': 'true', link: 'https://open.spotify.com/user/mechdriver' })
+	          ),
+	          ' '
 	        )
 	      );
 	    }
 	  }]);
 	
-	  return InterestBox;
+	  return Interests;
 	}(React.Component);
 	
 	;
 	
-	module.exports = InterestBox;
+	module.exports = Interests;
 
 /***/ }),
 /* 181 */
@@ -22482,6 +22466,65 @@
 	}(React.Component);
 	
 	module.exports = ContactForm;
+
+/***/ }),
+/* 182 */
+/*!***************************************!*\
+  !*** ./app/src/react/InterestBox.jsx ***!
+  \***************************************/
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var React = __webpack_require__(/*! react */ 1);
+	
+	var InterestBox = function (_React$Component) {
+	  _inherits(InterestBox, _React$Component);
+	
+	  function InterestBox() {
+	    _classCallCheck(this, InterestBox);
+	
+	    return _possibleConstructorReturn(this, (InterestBox.__proto__ || Object.getPrototypeOf(InterestBox)).apply(this, arguments));
+	  }
+	
+	  _createClass(InterestBox, [{
+	    key: "render",
+	    value: function render() {
+	      return React.createElement(
+	        "div",
+	        { id: "interest-box" },
+	        React.createElement(
+	          "div",
+	          { id: "interest-background" },
+	          React.createElement(
+	            "a",
+	            { href: this.props.link, target: "_blank" },
+	            React.createElement("i", { className: this.props.iconClass, "aria-hidden": "true" }),
+	            React.createElement(
+	              "span",
+	              null,
+	              this.props.name
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return InterestBox;
+	}(React.Component);
+	
+	;
+	
+	module.exports = InterestBox;
 
 /***/ })
 /******/ ]);

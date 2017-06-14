@@ -6,9 +6,9 @@ class NavBar extends React.Component {
       <nav id="nav-bar">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#experience">Background</a></li>
-          <li><a href="#interests-header">Interests</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#background-area">Background</a></li>
+          <li><a href="#interests-section">Interests</a></li>
+          <li><a href="#contact-section">Contact</a></li>
         </ul>
       </nav>
     );
