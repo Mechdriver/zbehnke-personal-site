@@ -1,7 +1,6 @@
 from flask import render_template, request
 from app import app
 import json
-import requests
 
 @app.route('/')
 @app.route('/home/')
@@ -15,15 +14,19 @@ def handle_email():
     name = payload_dict['name']
     email = payload_dict['email']
     message = payload_dict['message']
+    error_dict = {}
 
     if (not name or not is_name_vaild(name)):
-        return json.dumps({'error':'Name is not valid'}), 418, {'ContentType':'application/json'}
+        error_dict['name'] = 'Please enter a valid name'
 
     if (not email or not is_email_valid):
-        return json.dumps({'error':'Email is not valid'}), 418, {'ContentType':'application/json'}
+        error_dict['email'] = 'Please enter a valid email address'
 
     if (not message):
-        return json.dumps({'error':'Please enter a message'}), 418, {'ContentType':'application/json'}
+        error_dict['message'] = 'Please enter a message'
+
+    if (error_dict):
+        return json.dumps(error_dict), 418, {'ContentType':'application/json'}
 
     send_email(name, email, message)
 
