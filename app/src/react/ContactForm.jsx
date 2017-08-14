@@ -29,14 +29,43 @@ class ContactForm extends React.Component {
   }
 
   handleSubmit(event) {
-    if (this.state.name === '') {
-      this.setState({nameId: 'contact-input-error'});
-    } else {
+    /*if (nameIsValid(this.state.name)) {
       this.setState({nameId: 'contact-input'});
-      alert("Haha! Hey this worked. Neat. Don't forget to email yourself." + '\n' + this.state.name + '\n' + this.state.email + '\n' + this.state.message);
+      alert("Haha! Hey this worked. Neat. Don't forget to email yourself.");
+    } else {
+      this.setState({nameId: 'contact-input-error'});
     }
-    {/*TODO: Send email*/}
+
+    if (!inputIsValid(this.state.name)) {
+
+    }*/
+    var payload = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    };
+
+    var data = new FormData();
+    data.append("json", JSON.stringify(payload));
+
+    fetch('/submit/', {
+      method: "POST",
+      body: data
+    }).then(function(response) {
+        return response.json()
+    }).then(function(data) {
+        console.log(data.error);
+    });
+
     event.preventDefault();
+  }
+
+  nameIsValid(input) {
+    return input.match(/[0-9]/g) ? false : true;
+  }
+
+  emailIsValid(input) {
+
   }
 
   render() {
@@ -61,7 +90,9 @@ class ContactForm extends React.Component {
             </label>
             <textarea id={this.state.messageId} value={this.state.message} onChange={this.handleMessageChange} />
           </div>
-          <input type="submit" value="Send" />
+          <div className="button-box">
+            <input className="submit-button" type="submit" value="Send" />
+          </div>
         </form>
       </div>
     );
