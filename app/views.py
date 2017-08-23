@@ -19,7 +19,7 @@ def handle_email():
     if (not name or not is_name_vaild(name)):
         error_dict['name'] = 'Please enter a valid name'
 
-    if (not email or not is_email_valid):
+    if (not email or not is_email_valid(email)):
         error_dict['email'] = 'Please enter a valid email address'
 
     if (not message):
