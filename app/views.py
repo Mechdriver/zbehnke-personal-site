@@ -41,17 +41,20 @@ def is_name_vaild(name):
     if (not name):
         return False
 
+    #Names typicall don't have numbers in them
     if (re.search(r"[0-9]", name)):
         return False
 
     return True
 
 def is_email_valid(email):
+    #Source: http://emailregex.com/
     if (re.search(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email)):
         return True
 
     return False
 
+#Using SMTP for now
 def send_email(name, email, message):
     my_email = os.environ.get('GMAIL_ADDRESS')
     my_password = os.environ.get('GMAIL_PASS')

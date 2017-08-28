@@ -60,6 +60,7 @@ class ContactForm extends React.Component {
       errors.message = 'Please enter a message';
     }
 
+    //Required lodash just to verify an empty object
     if (!_.isEmpty(errors)) {
       this.displayErrors(errors);
     } else {
@@ -72,6 +73,7 @@ class ContactForm extends React.Component {
         globalThis.displayErrors(errors);
 
         if (!data.name && !data.email && !data.message) {
+          //Display a small success message
           globalThis.setState({successMessageId: 'text-visible'})
         }
       });
@@ -89,6 +91,7 @@ class ContactForm extends React.Component {
   }
 
   emailIsValid(input) {
+    //Source: http://emailregex.com/
     if (input.match(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
       return true;
     }
