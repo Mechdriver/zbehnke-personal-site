@@ -1,6 +1,11 @@
-from flask import render_template, request
 from app import app
+from flask import render_template, request
+from email.mime.text import MIMEText
+import base64
 import json
+import re
+import smtplib
+import os
 
 @app.route('/')
 @app.route('/home/')
@@ -26,17 +31,40 @@ def handle_email():
         error_dict['message'] = 'Please enter a message'
 
     if (error_dict):
-        return json.dumps(error_dict), 418, {'ContentType':'application/json'}
+        return json.dumps(error_dict), 400, {'ContentType':'application/json'}
 
     send_email(name, email, message)
 
     return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
 def is_name_vaild(name):
+    if (not name):
+        return False
+
+    if (re.search(r"[0-9]", name)):
+        return False
+
     return True
 
 def is_email_valid(email):
-    return True
+    if (re.search(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)", email)):
+        return True
+
+    return False
 
 def send_email(name, email, message):
-    pass
+    my_email = os.environ.get('GMAIL_ADDRESS')
+    my_password = os.environ.get('GMAIL_PASS')
+    email = email.strip()
+
+    email_message = MIMEText(message + "\nFrom Email: " + email)
+
+    email_message['Subject'] = 'Message from ' + name.strip() + ' via the zbehnke website.'
+    email_message['From'] = email
+    email_message['To'] = my_email
+    sender = smtplib.SMTP('smtp.gmail.com', 587)
+    sender.ehlo()
+    sender.starttls()
+    sender.login(my_email, my_password)
+    sender.sendmail(email, [my_email], email_message.as_string())
+    sender.quit()

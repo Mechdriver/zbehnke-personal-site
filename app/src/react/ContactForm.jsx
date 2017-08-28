@@ -42,6 +42,8 @@ class ContactForm extends React.Component {
       message: this.state.message
     };
 
+    globalThis.setState({successMessageId: 'text-hidden'})
+
     let data = new FormData();
     data.append("json", JSON.stringify(payload));
     let errors = {};
@@ -154,7 +156,7 @@ class ContactForm extends React.Component {
           <div className="button-box">
             <input className="submit-button" type="submit" value="Send" />
             <label className={this.state.successMessageId}>
-                Message sent. You will receive a confirmation email shortly.
+                Message sent
             </label>
           </div>
         </form>
