@@ -75,6 +75,9 @@ class ContactForm extends React.Component {
         if (!data.name && !data.email && !data.message) {
           //Display a small success message
           globalThis.setState({successMessageId: 'text-visible'})
+          globalThis.setState({name: ''});
+          globalThis.setState({email: ''});
+          globalThis.setState({message: ''});
         }
       });
     }

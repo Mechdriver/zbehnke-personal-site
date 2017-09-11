@@ -26,15 +26,15 @@ class Background extends React.Component {
               Python is still one of my favorite languages and it is my top choice for projects and scripts.
             </p>
             <p>
-              With time, work, and internships I became more and more adapt at programming. My classes gave me exposure to OpenGL, Android, and a variety of languages.
-              One of my internships introduces me to embedded systems. My part time job during my Senior year introduced me to industry level software development.
+              With time, work, and internships I became more and more adept at programming. My classes gave me exposure to OpenGL, Android, and a variety of languages.
+              One of my internships introduced me to embedded systems. My part time job during my Senior year introduced me to industry level software development.
             </p>
             <p>
               After I graduated from Cal Poly I received a job offer for a company in the Bay Area. I am currently working there as a web developer.
-              My weekends are spent hiking with my girlfriend, breeding Pokémon, and tinkering with interesting JavaScrip frameworks.
+              My weekends are spent hiking with my girlfriend, breeding Pokémon, and tinkering with interesting JavaScript frameworks.
             </p>
             <p>
-              If you would like to get in touch I can be contacted through LinkedIn or through my Contact Form.
+              If you would like to get in touch, I can be contacted through LinkedIn or through my Contact Form.
             </p>
           </span>
         </div>
