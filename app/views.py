@@ -56,7 +56,6 @@ def is_email_valid(email):
 
 #Using SMTP for now
 def send_email(name, email, message):
-    return
     my_email = os.environ.get('GMAIL_ADDRESS')
     my_password = os.environ.get('GMAIL_PASS')
     email = email.strip()
