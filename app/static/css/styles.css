@@ -1,157 +1,238 @@
 html body {
-  background-image: url(https://source.unsplash.com/fqmrAEiye1M/5808×3872);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   font-family: 'Raleway', sans-serif;
 }
 
-#nav-bar {
-  position: fixed;
-  top:0;
-  left: 0;
-  right: 0;
-  background-color:rgba(28, 1, 24, 1.0);
-  z-index: 9999;
+.home-menu {
+  background-color: rgba(28, 1, 24, 1.0);
+  padding: 0.5em;
 }
 
-#nav-bar ul {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-#nav-bar ul li {
-  display: inline;
-  list-style: none;
-}
-
-#nav-bar ul li a {
+.pure-menu-horizontal {
+  width: 100%;
   display: inline-block;
-  text-decoration: none;
+}
+
+.pure-menu-heading {
+  text-align: left;
+  font-weight: 400;
+  font-size: 120%;
+  color: white;
+}
+
+.pure-menu-list {
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  float: right;
+}
+
+.pure-menu-list-item {
+  vertical-align: middle;
+  background-color: rgba(28, 1, 24, 1.0);
+}
+
+.pure-menu-link {
   color: white;
   opacity: 0.7;
-  font-size: 24px;
-  vertical-align: middle;
-  padding: 15px;
+  background-color: rgba(28, 1, 24, 1.0);
 }
 
-#nav-bar ul li a:hover {
-  color: white;
+.pure-menu-link:hover {
   text-shadow: 0px 0px 3px white;
   opacity: 1;
-  vertical-align: middle;
-}
-
-#intro {
-  height: 50vh;
-  padding-top: 395px;
-  line-height: 50px;
-  display: block;
   color: white;
-  opacity: 0.7;
-  font-size: 32px;
-  text-align: center;
-  vertical-align: middle;
-  cursor: default;
+  background-color: rgba(28, 1, 24, 1.0);
 }
 
-#background-area {
-  padding-top: 50px;
-}
-
-#background-area:hover {
-  cursor: default;
-}
-#background-header {
-  display: block;
+.pure-menu-link:visited {
   color: white;
-  opacity: 0.7;
-  font-size: 56px;
-  text-align: center;
-  vertical-align: middle;
+  background-color: rgba(28, 1, 24, 1.0);
 }
 
-#background-section {
-  width: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-  margin-left: 300px;
-  margin-right: 300px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 70px;
-  padding-right: 70px;
+.splash-container {
+  background: url(../img/golden-gate-night.jpg);
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 92%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  position: fixed !important
+}
+
+.splash {
+  position: absolute;
+  top: 100px;
+  width: 80%;
+  height: 50%;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.splash-head {
+  color: white;
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+.splash-subhead {
+  color: white;
+  font-size: 18px;
+  opacity: 0.7;
+}
+
+@media (min-width: 480px) {
+  .home-menu {
+    text-align: left;
+  }
+  .splash {
+    width: 50%;
+    height: 50%;
+  }
+
+  .splash-head {
+    font-size: 32px;
+  }
+
+  .splash-subhead {
+    font-size: 30px;
+  }
+}
+
+.content-container {
+  position: absolute;
+  top: 92%;
+  width: 100%;
+  background: black;
   height: auto;
+  z-index: 2;
 }
 
-#background-text {
-  width: auto;
-  font-size: 20px;
+.background-container {
+  top: 80%;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+}
+
+.background-container:hover {
+  cursor: default;
+}
+
+.background-header {
+  padding-top: 2em;
+  display: block;
+  color: white;
+  opacity: 0.7;
+  font-size: 22px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.background-section {
+  height: auto;
+  font-size: 18px;
   color: white;
   opacity: 0.7;
   text-align: left;
   vertical-align: middle;
 }
 
-#interests-section {
-  width: auto;
-  margin-left: 300px;
-  margin-right: 300px;
+@media (min-width: 480px) {
+  .background-container {
+    width: 50%;
+    height: 50%;
+  }
+
+  .background-header {
+    font-size: 32px;
+  }
+
+  .background-section {
+    font-size: 20px;
+  }
+}
+
+.interests-section {
+  top: 80%;
+  width: 80%;
   height: auto;
-  padding-top: 150px;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 10em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 3em;
+  vertical-align: middle;
 }
 
-#interests-header {
+.interests-header {
   display: block;
   color: white;
   opacity: 0.7;
-  font-size: 56px;
+  font-size: 22px;
   text-align: center;
   vertical-align: middle;
 }
 
-#interests-list {
-  padding-top: 50px;
-  padding-left: 0;
-  list-style-type: none;
-  columns: 3;
+.interest-box {
+  margin-bottom: 2em;
   text-align: center;
-  vertical-align: middle;
-  display: block;
 }
 
-#interest-box {
-  margin-bottom: 25px;
-}
-
-#interest-background {
-  padding-top: 15px;
-  background: rgba(0, 0, 0, 0.8);
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-}
-
-#interest-box a {
+.interest-box a {
   color: white;
   opacity: 0.7;
-  font-size: 28px;
+  font-size: 18px;
   text-decoration: none;
 }
 
-#interest-box a:hover {
+.interest-box a:hover {
   text-shadow: 0px 0px 3px white;
   opacity: 1;
 }
 
-#interest-box i {
+.interest-box i {
   text-align: center;
   vertical-align: middle;
   display: inline-block;
 }
 
-#interest-box span {
-  display: block;
+.interest-text {
+  color: white;
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+@media (min-width: 480px) {
+  .interests-header {
+    font-size: 32px;
+  }
+
+  .interest-box a {
+    font-size: 28px;
+  }
+
+  .interest-text {
+    font-size: 28px;
+  }
 }
 
 #contact-section {

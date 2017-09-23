@@ -3,12 +3,11 @@ var React = require('react');
 class Background extends React.Component {
   render() {
     return (
-      <div id="background-area">
-        <p id="background-header">
-          <span>Background</span>
-        </p>
-        <div id="background-section">
-          <span id="background-text">
+      <div className="background-container" id="background-container">
+        <h2 className="background-header">
+          <span>My Background</span>
+        </h2>
+        <div className="background-section">
             <p>
               I was raised around computers. My dad was a programmer and would constantly work and play with them throughout my childhood.
               My early experiences with computers involved video games. I loved point and click adventure games and whatever retro games my dad could emulate on his machines.
@@ -36,7 +35,6 @@ class Background extends React.Component {
             <p>
               If you would like to get in touch, I can be contacted through LinkedIn or through my Contact Form.
             </p>
-          </span>
         </div>
       </div>
     );
