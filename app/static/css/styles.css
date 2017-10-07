@@ -82,13 +82,13 @@ html body {
 .splash-head {
   color: white;
   font-size: 24px;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 .splash-subhead {
   color: white;
   font-size: 18px;
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 @media (min-width: 480px) {
