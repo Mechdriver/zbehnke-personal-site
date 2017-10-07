@@ -4,7 +4,7 @@ class Background extends React.Component {
   render() {
     return (
       <div className="background-container" id="background-container">
-        <h2 className="background-header">
+        <h2 className="section-header">
           <span>My Background</span>
         </h2>
         <div className="background-section">

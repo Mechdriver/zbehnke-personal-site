@@ -7,13 +7,16 @@ class ContactForm extends React.Component {
     this.state = {name: '',
                   email: '',
                   message: '',
-                  nameId: 'contact-input',
-                  emailId: 'contact-input',
-                  messageId: 'message-input',
-                  successMessageId: 'text-hidden',
+                  nameId: 'contact-input pure-input-2-3',
+                  emailId: 'contact-input pure-input-2-3',
+                  messageId: 'message-input pure-input-2-3',
+                  loaderId: '',
                   nameError: '',
                   emailError: '',
-                  messageError: ''
+                  messageError: '',
+                  buttonId: 'submit-button pure-button pure-button-primary pure-input-1-2',
+                  buttonText: 'Submit',
+                  isDisabled: ''
                 };
 
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -24,14 +27,20 @@ class ContactForm extends React.Component {
 
   handleNameChange(event) {
     this.setState({name: event.target.value});
+    this.setState({buttonId: 'submit-button pure-button pure-button-primary pure-input-1-2'});
+    this.setState({buttonText: 'Submit'});
   }
 
   handleEmailChange(event) {
     this.setState({email: event.target.value});
+    this.setState({buttonId: 'submit-button pure-button pure-button-primary pure-input-1-2'});
+    this.setState({buttonText: 'Submit'});
   }
 
   handleMessageChange(event) {
     this.setState({message: event.target.value});
+    this.setState({buttonId: 'submit-button pure-button pure-button-primary pure-input-1-2'});
+    this.setState({buttonText: 'Submit'});
   }
 
   handleSubmit(event) {
@@ -64,20 +73,27 @@ class ContactForm extends React.Component {
     if (!_.isEmpty(errors)) {
       this.displayErrors(errors);
     } else {
+      globalThis.setState({loaderId: 'pulse-loader'});
       fetch('/submit/', {
         method: "POST",
         body: data
       }).then(function(response) {
+        globalThis.setState({loaderId: ''});
+        console.log(response);
         return response.json();
-      }).then(function(errors) {
-        globalThis.displayErrors(errors);
+      }).then(function(data) {
+        globalThis.displayErrors(data);
 
-        if (!data.name && !data.email && !data.message) {
+        console.log(data);
+        if (data.success) {
           //Display a small success message
           globalThis.setState({successMessageId: 'text-visible'})
           globalThis.setState({name: ''});
           globalThis.setState({email: ''});
           globalThis.setState({message: ''});
+          globalThis.setState({buttonId: 'submit-button-success pure-button pure-button-primary pure-input-1-2'});
+          globalThis.setState({buttonText: 'Message Sent!'});
+          globalThis.setState({isDisabled: ''});
         }
       });
     }
@@ -104,66 +120,42 @@ class ContactForm extends React.Component {
 
   displayErrors(errors) {
     if (errors.name) {
-      this.setState({nameId: 'contact-input-error'});
-      this.setState({nameError: errors.name});
+      this.setState({buttonId: 'submit-button-error pure-button pure-button-primary pure-input-1-2'});
+      this.setState({buttonText: errors.name});
+    } else if (errors.email) {
+      this.setState({buttonId: 'submit-button-error pure-button pure-button-primary pure-input-1-2'});
+      this.setState({buttonText: errors.email});
+    } else if (errors.message) {
+      this.setState({buttonId: 'submit-button-error pure-button pure-button-primary pure-input-1-2'});
+      this.setState({buttonText: errors.message});
     } else {
-      this.setState({nameId: 'contact-input'});
-      this.setState({nameError: ''});
-    }
-
-    if (errors.email) {
-      this.setState({emailId: 'contact-input-error'});
-      this.setState({emailError: errors.email});
-    } else {
-      this.setState({emailId: 'contact-input'});
-      this.setState({emailError: ''});
-    }
-
-    if (errors.message) {
-      this.setState({messageId: 'message-input-error'});
-      this.setState({messageError: errors.message});
-    } else {
-      this.setState({messageId: 'message-input'});
-      this.setState({messageError: ''});
+      this.setState({buttonId: 'submit-button pure-button pure-button-primary pure-input-1-2'});
+      this.setState({buttonText: 'Submit'});
     }
   }
 
   render() {
     return (
-      <div id="contact-form">
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label className="contact-label">
-              Name:
-            </label>
-            <input className={this.state.nameId} type="text" value={this.state.name} onChange={this.handleNameChange} />
-            <label className="error-label">
-              <strong>{this.state.nameError}</strong>
-            </label>
-          </div>
-          <div>
-            <label className="contact-label">
-              Email:
-            </label>
-            <input className={this.state.emailId} type="text" value={this.state.email} onChange={this.handleEmailChange} />
-              <label className="error-label">
-                <strong>{this.state.emailError}</strong>
-              </label>
-          </div>
-          <div>
-            <label className="contact-label">
-              Message:
-            </label>
-            <textarea className={this.state.messageId} value={this.state.message} onChange={this.handleMessageChange} />
-              <label className="error-label">
-                <strong>{this.state.messageError}</strong>
-              </label>
-          </div>
+      <div className="contact-section" id="contact-section">
+        <h2 className="section-header">
+          <span>Contact</span>
+        </h2>
+        <form className="pure-form" onSubmit={this.handleSubmit}>
+          <fieldset className="pure-group">
+            <input className="contact-input pure-input-2-3" placeholder="Name" type="text" value={this.state.name} onChange={this.handleNameChange} />
+          </fieldset>
+
+          <fieldset className="pure-group">
+            <input className="contact-input pure-input-2-3" placeholder="Email" type="text" value={this.state.email} onChange={this.handleEmailChange} />
+          </fieldset>
+
+          <fieldset className="pure-group">
+            <textarea className="message-input pure-input-2-3" placeholder="Message" value={this.state.message} onChange={this.handleMessageChange} />
+          </fieldset>
           <div className="button-box">
-            <input className="submit-button" type="submit" value="Send" />
-            <label className={this.state.successMessageId}>
-                Message sent
-            </label>
+            <div className={this.state.loaderId}>
+              <button className={this.state.buttonId} type="submit" value="Send" disabled={this.state.isDisabled}>{this.state.buttonText}</button>
+            </div>
           </div>
         </form>
       </div>

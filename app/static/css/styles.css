@@ -134,7 +134,7 @@ html body {
   cursor: default;
 }
 
-.background-header {
+.section-header {
   padding-top: 2em;
   display: block;
   color: white;
@@ -159,7 +159,7 @@ html body {
     height: 50%;
   }
 
-  .background-header {
+  .section-header {
     font-size: 32px;
   }
 
@@ -180,15 +180,6 @@ html body {
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 3em;
-  vertical-align: middle;
-}
-
-.interests-header {
-  display: block;
-  color: white;
-  opacity: 0.7;
-  font-size: 22px;
-  text-align: center;
   vertical-align: middle;
 }
 
@@ -222,8 +213,9 @@ html body {
 }
 
 @media (min-width: 480px) {
-  .interests-header {
-    font-size: 32px;
+  .interests-section {
+    width: 50%;
+    height: 50%;
   }
 
   .interest-box a {
@@ -235,146 +227,163 @@ html body {
   }
 }
 
-#contact-section {
-  padding-top: 150px;
-}
-
-#contact-header {
-  display: block;
-  color: white;
-  opacity: 0.7;
-  font-size: 56px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-#contact-form {
-  width: auto;
-  margin-left: 400px;
-  margin-right: 400px;
+.contact-section {
+  top: 80%;
+  width: 80%;
   height: auto;
-  vertical-align: middle;
-  text-align: left;
-}
-
-.contact-label {
-  width: 140px;
-  display: inline-block;
-  text-align: right;
-  color: white;
-  opacity: 0.7;
-  font-size: 28px;
-}
-
-.error-label {
-  width: auto;
-  margin-left: 20px;
-  display: block;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top: 10em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 10em;
   vertical-align: middle;
   text-align: center;
-  color: red;
-  font-size: 20px;
+}
+
+.pure-form .pure-group input,
+.pure-form .pure-group textarea {
+  display: inline-block;
+}
+
+.pure-form .pure-group input:focus,
+.pure-form .pure-group textarea:focus {
+  outline: 1px;
+  border-color: white;
 }
 
 .contact-input {
-  margin-left: 20px;
-  margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid white;
   outline-color: white;
   color: white;
   font-family: 'Raleway', sans-serif;
-  font-size: 28px;
-  width: 600px;
-  height: 50px;
+  font-size: 14px;
 }
 
-.contact-input-error {
-  margin-left: 20px;
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 2px solid red;
-  outline-color: red;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  font-size: 28px;
-  width: 600px;
-  height: 50px;
+.contact-input:focus {
+  border-color: white;
 }
 
 .message-input {
   vertical-align: top;
-  resize: none;
-  margin-left: 20px;
-  margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.8);
   border: 1px solid white;
   outline-color: white;
   color: white;
   font-family: 'Raleway', sans-serif;
-  font-size: 28px;
-  width: 600px;
-  height: 400px;
-}
-
-.message-input-error {
-  vertical-align: top;
-  resize: none;
-  margin-left: 20px;
-  margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 2px solid red;
-  outline-color: red;
-  color: white;
-  font-family: 'Raleway', sans-serif;
-  opacity: 0.7;
-  font-size: 28px;
-  width: 600px;
-  height: 400px;
+  font-size: 14px;
 }
 
 .button-box {
-  display: block;
-  vertical-align: middle;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 100px;
+  padding-top: 2em;
 }
 
 .submit-button {
-  outline: none;
-  font-size: 28px;
-  background-color: rgba(28, 1, 24, 1.0);
   color: white;
   font-family: 'Raleway', sans-serif;
-  margin-left: 20px;
-  width: 200px;
+}
+
+.submit-button-error {
+  background-color: red;
+  font-size: 12px;
+}
+
+.submit-button-success {
+  background-color: green;
+}
+
+@media (min-width: 480px) {
+  .contact-section {
+    width: 50%;
+    height: 50%;
+  }
+
+  .contact-input {
+    font-size: 28px;
+  }
+
+  .message-input {
+    font-size: 28px;
+  }
+
+  .submit-button-error {
+    font-size: 18px;
+  }
+}
+
+.footer {
+  background-color: rgba(28, 1, 24, 1.0);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  z-index: 3;
+  padding: 1em;
+  color: white;
+  font-size: 14px;
+}
+
+/*Source: https://github.com/jlong/css-spinners*/
+.pulse-loader:not(:required) {
+  display: inline-block;
+  width: 50px;
   height: 50px;
+  -moz-animation: pulse-loader 0.7s linear infinite alternate;
+  -webkit-animation: pulse-loader 0.7s linear infinite alternate;
+  animation: pulse-loader 0.7s linear infinite alternate;
+  border: 2px solid ;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: 50px;
 }
 
-.text-visible {
-  font-size: 26px;
-  color: white;
-  font-family: 'Raleyway', sans-serif;
-  display: block;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: 20px;
-  padding-top: 20px;
-  visibility: visible;
-  opacity: 0;
-  transition: opacity 8s linear;
+@-moz-keyframes pulse-loader {
+  0% {
+    -moz-box-shadow: purple 0 0 0px 20px;
+    box-shadow: purple 0 0 0px 20px;
+  }
+  40% {
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  100% {
+    -moz-box-shadow: purple 0 0 0px 25px inset;
+    box-shadow: purple 0 0 0px 25px inset;
+  }
 }
-
-.text-hidden {
-  font-size: 26px;
-  color: white;
-  font-family: 'Raleyway', sans-serif;
-  display: block;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: 20px;
-  padding-top: 20px;
-  opacity: 0.7;
-  visibility: hidden;
+@-webkit-keyframes pulse-loader {
+  0% {
+    -webkit-box-shadow: purple 0 0 0px 20px;
+    box-shadow: purple 0 0 0px 20px;
+  }
+  40% {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  100% {
+    -webkit-box-shadow: purple 0 0 0px 25px inset;
+    box-shadow: purple 0 0 0px 25px inset;
+  }
+}
+@keyframes pulse-loader {
+  0% {
+    -moz-box-shadow: purple 0 0 0px 20px;
+    -webkit-box-shadow: purple 0 0 0px 20px;
+    box-shadow: purple 0 0 0px 20px;
+  }
+  40% {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  100% {
+    -moz-box-shadow: purple 0 0 0px 25px inset;
+    -webkit-box-shadow: purple 0 0 0px 25px inset;
+    box-shadow: purple 0 0 0px 25px inset;
+  }
 }

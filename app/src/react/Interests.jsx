@@ -6,7 +6,7 @@ class Interests extends React.Component {
   render() {
     return (
       <div className="interests-section" id="interests-section">
-        <h2 className="interests-header">Interests</h2>
+        <h2 className="section-header">Interests</h2>
         <div className="pure-g">
           <div className="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-3"><InterestBox name="Github" iconClass="fa fa-github fa-5x" aria-hidden="true" link="https://github.com/Mechdriver"/></div> {/*Github*/}
           <div className="pure-u-1-2 pure-u-md-1-2 pure-u-lg-1-3"><InterestBox name="Steam" iconClass="fa fa-steam fa-5x" aria-hidden="true" link="http://steamcommunity.com/id/mechdriver/"/></div> {/*Steam Account*/}

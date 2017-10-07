@@ -15,6 +15,10 @@ class HomePage extends React.Component {
         <div className="content-container">
           <Background />
           <Interests />
+          <ContactForm />
+        </div>
+        <div className="footer">
+          Created with Flask, React.js, and Pure.css.
         </div>
       </div>
     );
