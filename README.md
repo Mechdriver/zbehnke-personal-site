@@ -1,3 +1,5 @@
+This is now deprecated. The new version of this project is [here](https://github.com/Mechdriver/zbehnke-serverless-personal-site).
+
 # Overview of Behnke.codes
 Live site is at [Behnke.codes](https://behnke.codes).  
 I used this project to become familiar with building a website from scratch.  
