@@ -4,7 +4,7 @@
   "description": "Building a personal website.",
   "main": "index.js",
   "dependencies": {
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.21",
     "npm": "^5.3.0",
     "purecss": "^1.0.0",
     "react": "^15.6.1",
